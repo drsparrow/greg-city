@@ -1,0 +1,13 @@
+<section class='side-nav'>
+  <div>
+    <a href='index.html'>Main page</a>
+    <a href='goals.html'>Goals</a>
+    <a href='trivia-game.html'>Greg trivia</a>
+  <div>
+
+  </div>
+    {% for link in page.links %}
+      <a href='#{{link.id}}'>{{link.text}}</a>
+    {% endfor %}
+  </div>
+</section>
