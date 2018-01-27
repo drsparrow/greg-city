@@ -1,0 +1,93 @@
+---
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include head.html %}
+    <link rel="stylesheet" href="css/trivia.css">
+  </head>
+  <body>
+    <section class='side-nav'>
+      <div>
+        <a href='index.html'>Main page</a>
+        <a href='goals.html'>Goals</a>
+        <a href='trivia-game.html'>Greg trivia</a>
+      </div>
+    </section>
+    <div class='main-content'>
+
+      <img src="images/logo.png" class='greg-logo w80'>
+      <span class='page-title w20'>/ Trivia</span>
+
+      <hr>
+
+      It's time to play <b>Greg trival game!</b>
+      <br><br>
+      <form action="trivia-answers.html" method="get">
+        <div class="year-area question">
+          <label for="year-3">In what year was I born?</label>
+          <input type="number" name="year-1" value='1' disabled>
+          <input type="number" name="year-2" value='9' disabled>
+          <input type="number" name="year-3" value='0' min='0' max='9' id='year-3'>
+          <input type="number" name="year-4" value='0' min='0' max='9'>
+          <i>(The first two digets are given for you)</i>
+        </div>
+
+        <div class="question">
+          <label for="color">What is my favorite color?</label>
+          <input type="color" name="color" id='color'>
+        </div>
+
+        <div class="question">
+          <label for="bitcoin">How many bitcoin do I have?</label>
+          <label for="etherium">How many etherium?</label>
+          <textarea placeholder="bitcoin?" name="bitcoin" id='bitcoin' rows="3" cols="8"></textarea>
+          <textarea placeholder="etherium?" name="etherium" id='etherium' rows="3" cols="8"></textarea>
+        </div>
+
+        <div class="question">
+          Do I have a dog?
+          <label for="dog-yes">Yes</label>
+          <input type="checkbox" name="dog-yes" id="dog-yes">
+          <label for="dog-no">No</label>
+          <input type="checkbox" name="dog-no" id="dog-no">
+        </div>
+
+        <div class="question">
+          What is my favorite time of year?
+          <label for="month">Month:</label>
+          <input type="month" id="month" name='month'>
+          <label for="week">week:</label>
+          <input type="week" id="week" name="week">
+        </div>
+
+        <div class="question">
+          <label for="time">What time do you think I usually go out?</label>
+          <input type="time" name="time" id="time">
+        </div>
+
+        <div class="question">
+          <label for="sat">What score did I get on my SAT?</label>
+          <br>
+          <input type="range" name="sat" id="sat" min='0' max='3600' step='.0001' oninput="updateSat.call(this)">
+          <span id="sat-val">0</span>
+          <br>
+          <label for="act">ACT?</label>
+          <input type="range" name="act" id="act" min='0' max='38' step='.0001' oninput="updateAct.call(this)">
+          <span id="act-val">0</span>
+        </div>
+
+
+        <button type="submit">Check how i did!</button>
+      </form>
+  </body>
+
+  <script type="text/javascript">
+    var sat = document.getElementById('sat-val');
+    var act = document.getElementById('act-val');
+    function updateSat () { sat.innerText = this.value; }
+    function updateAct () { act.innerText = this.value; }
+  </script>
+
+</html>

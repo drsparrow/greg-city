@@ -1,0 +1,136 @@
+---
+# front-matter for scss
+---
+
+body {
+  font-family: sans-serif;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-image: url('../images/gregs.jpg');
+  background-size: 100vh auto;
+  background-attachment: fixed;
+}
+
+marquee {
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.main-content {
+  position: relative;
+  width: 800px;
+  margin: 0px auto;
+  background: lightgray;
+  padding: 20px;
+  border-left: 20px solid black;
+  border-right: 20px solid black;
+  box-shadow: 0 0 500px black;
+}
+
+table {
+  background: #777;
+  font-size: 14px;
+}
+
+tr {
+  background: #aaa;
+}
+
+td {
+  padding-left: 8px;
+  position: relative;
+}
+
+td.not-yet {
+  background: pink;
+}
+
+td.in-progress {
+  background: lightyellow;
+}
+
+td.done {
+  background: lightgreen;
+}
+
+td input {
+  position: absolute;
+}
+
+.tiny {
+  font-size: 12px;
+}
+
+.welcome {
+  font-size: 18px;
+}
+
+#b {
+  float: right;
+}
+
+a {
+  text-decoration: underline;
+  color: darkblue;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.greg-logo {
+  width: 100%;
+}
+
+.greg-logo.w80 {
+  width: 80%;
+}
+
+.page-title.w20 {
+  width: 20%;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.page-title.w20.small {
+  font-size: 22px;
+}
+
+.side-nav {
+  position: fixed;
+  border: 2px solid white;
+  background: black;
+  left: 10px;
+  top: 10px;
+  z-index: 4;
+}
+
+.side-nav a {
+  display: block;
+  padding: 8px;
+  max-width: 100px;
+  overflow: visible;
+}
+.side-nav a.selected {
+  background: gray;
+}
+
+.side-nav a:hover {
+  background: darkgray;
+}
+
+.side-nav div {
+  padding: 3px;
+  background: #eee;
+  margin: 5px;
+}
+
+.images img {
+  max-width: 50%;
+}
+
+.images .caption {
+  margin-bottom: 12px;
+}
