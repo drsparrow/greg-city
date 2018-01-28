@@ -2,16 +2,18 @@
 # front-matter for scss
 ---
 
-.year-area input {
-  border: none;
-  margin: 0;
-  padding: 3px 0;
-  text-align: center;
-  width: 40px;
-}
+.year-area {
+  input {
+    border: none;
+    margin: 0;
+    padding: 3px 0;
+    text-align: center;
+    width: 40px;
 
-.year-area input[disabled] {
-  background: #ddd;
+    &[disabled] {
+      background: #ddd;
+    }
+  }
 }
 
 .question {
