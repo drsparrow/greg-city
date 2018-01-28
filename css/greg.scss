@@ -34,31 +34,31 @@ marquee {
 table {
   background: #777;
   font-size: 14px;
-}
 
-tr {
-  background: #aaa;
-}
+  tr {
+    background: #aaa;
+  }
 
-td {
-  padding-left: 8px;
-  position: relative;
-}
+  td {
+    padding-left: 8px;
+    position: relative;
 
-td.not-yet {
-  background: pink;
-}
+    &.not-yet {
+      background: pink;
+    }
 
-td.in-progress {
-  background: lightyellow;
-}
+    &.in-progress {
+      background: lightyellow;
+    }
 
-td.done {
-  background: lightgreen;
-}
+    &.done {
+      background: lightgreen;
+    }
 
-td input {
-  position: absolute;
+    input {
+      position: absolute;
+    }
+  }
 }
 
 .tiny {
@@ -117,32 +117,36 @@ a {
   left: 10px;
   top: 10px;
   z-index: 4;
+
+  a {
+    display: block;
+    padding: 8px;
+    max-width: 100px;
+    overflow: visible;
+
+    &.selected {
+      background: gray;
+    }
+
+    &:hover {
+      background: darkgray;
+    }
+  }
+
+  div {
+    padding: 3px;
+    background: #eee;
+    margin: 5px;
+  }
 }
 
-.side-nav a {
-  display: block;
-  padding: 8px;
-  max-width: 100px;
-  overflow: visible;
-}
-.side-nav a.selected {
-  background: gray;
-}
+.images {
+  img {
+    max-width: 50%;
+  }
 
-.side-nav a:hover {
-  background: darkgray;
-}
+  .caption {
+    margin-bottom: 12px;
+  }
 
-.side-nav div {
-  padding: 3px;
-  background: #eee;
-  margin: 5px;
-}
-
-.images img {
-  max-width: 50%;
-}
-
-.images .caption {
-  margin-bottom: 12px;
 }
