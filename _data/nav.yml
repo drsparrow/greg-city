@@ -2,7 +2,7 @@
   text: Main
 - path: goals.html
   text: Goals
-- path: trivia-game.html
-  text: Trivia
 - path: puzzle.html
   text: Puzzles
+- path: trivia-game.html
+  text: Trivia
