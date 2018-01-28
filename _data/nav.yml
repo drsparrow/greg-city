@@ -1,0 +1,6 @@
+- path: index.html
+  text: Main Page
+- path: goals.html
+  text: Goals
+- path: trivia-game.html
+  text: Greg Trivia
