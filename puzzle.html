@@ -19,9 +19,6 @@ links:
 ---
 
 
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
 <img src="images/logo.png" class='greg-logo w80'>
 <span class='page-title w20 medium'>/ Puzzles</span>
 <hr>
@@ -29,7 +26,8 @@ links:
 Check out some Greg Puzzles.  These ones are solved.  Can you unsolve them?
 {% include m.html %}
 {% for p in page.links %}
-  <hr>{% include m.html %}
+  <hr>
+  {% include m.html %}
   <h3 id='{{p.id}}'>{{p.text}} Puzzle</h3>
   <div class="full-puzzle" style='width: {{p.size}}px; height: {{p.size}}px'>
     {% assign width = p.size | divided_by: p.step %}
