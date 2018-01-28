@@ -1,12 +1,24 @@
 ---
 layout: default
+links:
+  - src: turtle0
+    id: turtle-puzzle
+    size: 700
+    step: 5
+    text: Me with Turtle
+  - src: dubai0
+    id: dubai-puzzle
+    size: 650
+    step: 10
+    text: Me in Dubai
 ---
 
 
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-{% for p in site.data.puzzles %}
+{% for p in page.links %}
+  <h3 id='{{p.id}}'>{{p.text}}</h3>
   <div class="full-puzzle" style='width: {{p.size}}px; height: {{p.size}}px'>
     {% assign width = p.size | divided_by: p.step %}
     {% assign s = p.step | minus: 1 %}
