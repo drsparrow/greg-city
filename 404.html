@@ -3,6 +3,24 @@ layout: default
 ---
 
 <div class="container">
+
+  <img src="images/logo.png" class='greg-logo w80'>
+  <span class='page-title w20'>/ 404</span>
+  <hr>
+
   <h1>404</h1>
+
+  You found a missing page.
+
+  Go to one of these places:
+
+  <ul>
+    {% for p in site.data.nav %}
+    <li>
+      <a href="{{p.path}}">{{p.text}}</a>
+    </li>
+    {% endfor %}
+  </ul>
+
 
 </div>
