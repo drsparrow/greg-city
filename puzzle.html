@@ -47,8 +47,9 @@ Check out this puzzles of Greg.  These puzzles are solved.  Can you unsolve them
 
 
 <script type="text/javascript">
-$( function() {
-  $( ".full-puzzle" ).sortable();
-  $( ".full-puzzle" ).disableSelection();
-} );
+  $(function() {
+    $(".full-puzzle").sortable();
+    $(".full-puzzle").disableSelection();
+    $(".full-puzzle .puzzle-piece").click(function () {$(this).toggleClass('flipped')})
+  });
 </script>
