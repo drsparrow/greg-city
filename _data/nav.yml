@@ -4,3 +4,5 @@
   text: Goals
 - path: trivia-game.html
   text: Greg Trivia
+- path: puzzle.html
+  text: Greg Puzzles
