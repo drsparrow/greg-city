@@ -69,11 +69,11 @@ table {
   font-size: 18px;
 }
 
-.bottom-link {
+.right-link {
   float: right;
 }
 
-.top-link {
+.left-link {
   float: left;
 }
 
@@ -114,7 +114,13 @@ a {
   font-size: 35px;
 }
 
-.side-nav {
+.right-side-nav {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  z-index: 4;
+}
+.left-side-nav {
   position: fixed;
   border: 2px solid white;
   background: black;
@@ -153,4 +159,32 @@ a {
     margin-bottom: 12px;
   }
 
+}
+
+.right-nav-link {
+  padding: 8px;
+  background: darkgray;
+  border-radius: 5px;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  position: relative;
+
+  &.disabled {
+    opacity: 0.5;
+  }
+
+  .path-name {
+    font-size: 14px;
+    font-weight: normal;
+    color: black;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
 }

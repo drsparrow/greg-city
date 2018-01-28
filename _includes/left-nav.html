@@ -1,4 +1,4 @@
-<section class='side-nav'>
+<section class='left-side-nav'>
   <div>
     {% for link in site.data.nav %}
       <a href='{{link.path}}' {% if page.path == link.path %} class="selected" {%endif%}>{{link.text}}</a>

@@ -1,8 +1,8 @@
 - path: index.html
-  text: Main Page
+  text: Main
 - path: goals.html
   text: Goals
 - path: trivia-game.html
-  text: Greg Trivia
+  text: Trivia
 - path: puzzle.html
-  text: Greg Puzzles
+  text: Puzzles

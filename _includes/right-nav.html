@@ -1,0 +1,27 @@
+{% assign paths = site.data.nav | map: 'path' %}
+{% assign index = paths | index_of: page.path %}
+{% assign prevIndex = index | plus: -1 %}
+{% assign nextIndex = index | plus: 1 %}
+{% assign prev = site.data.nav[prevIndex] %}
+{% assign next = site.data.nav[nextIndex] %}
+<section class='right-side-nav'>
+
+  {% if prevIndex >= 0 %}
+    <a href="{{prev.path}}" class='right-nav-link'>
+      &#x21e6;
+      <span class='path-name'>{{prev.text}}</span>
+    </a>
+  {% else %}
+    <span class='right-nav-link disabled'>&#x21e6;</span>
+  {% endif %}
+
+  {% if next %}
+    <a href="{{next.path}}" class='right-nav-link'>
+      &#x21e8;
+      <span class='path-name'>{{next.text}}</span>
+    </a>
+  {% else %}
+    <span class='right-nav-link disabled'>&#x21e8;</span>
+  {% endif %}
+
+</section>

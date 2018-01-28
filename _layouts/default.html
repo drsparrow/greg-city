@@ -7,7 +7,8 @@
     {% include head.html %}
   </head>
   <body class='{{page.path | split: "." | first}}-page'>
-    {% include nav.html %}
+    {% include left-nav.html %}
+    {% include right-nav.html %}
     <div class="main-content">
       {{ content }}
 
