@@ -13,13 +13,6 @@ body {
   background-attachment: fixed;
 }
 
-marquee {
-  position: absolute;
-  color: white;
-  font-size: 20px;
-  font-style: italic;
-}
-
 .main-content {
   position: relative;
   width: 800px;
@@ -188,4 +181,8 @@ a {
     bottom: 0;
     width: 100%;
   }
+}
+
+.hidden {
+  display: none;
 }

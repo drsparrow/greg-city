@@ -1,0 +1,47 @@
+---
+# front-matter for scss
+---
+
+
+marquee {
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  font-style: italic;
+  pointer-events: none;
+  z-index: 4;
+
+  &.greg-marquee {
+    position: fixed;
+  }
+
+  &#greg-marquee-1 {
+    bottom: 0px;
+    img { height: 50px; }
+  }
+
+  &#greg-marquee-2 {
+    bottom: 50%;
+    img { height: 40px; }
+  }
+
+  &#greg-marquee-3 {
+    bottom: -40px;
+    img { height: 100px; }
+  }
+
+  &#greg-marquee-4 {
+    top: 10%;
+    img { height: 30px; }
+  }
+
+  &#greg-marquee-5 {
+    top: 10%;
+    img { height: 35px; }
+  }
+
+  &#greg-marquee-6 {
+    top: 20%;
+    img { height: 35px; }
+  }
+}
