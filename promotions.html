@@ -7,7 +7,13 @@ links:
     text: Tool Kit
   - id: greg-meets-bagel
     text: Coffe Meets Bagel
+  - id: product-submissions
+    text: Submissions
 toolkit-link: http://www.sears.com/craftsman-evolv-83-pc-homeowner-tool-set-w-bag/p-00941283000P?sid=IDx01192011x202447059&gclid=EAIaIQobChMI9MfpsMT72AIVixuBCh1RwgbBEAQYAiABEgLtz_D_BwE&gclsrc=aw.ds&dclid=CJ7chbPE-9gCFQMNNwodQ7EK7Q
+input-options:
+  - "Yes"
+  - "No"
+  - "Maybe"
 ---
 
 <img src="images/logo.png" class='greg-logo w80'>
@@ -57,7 +63,31 @@ These are things that I can proudly say I promote.  Strong recomendations.
 
 <hr>
 
-If you would like to see one of your promotions up here, please contact me.
+<h3 id='product-submissions'>Submission</h3>
+
+<div class="fake-form-info">
+  If you would like to see one of your promotions up here, please fill out the information below and I will get back to you ASAP
+</div>
+
+<div class="fake-form">
+  <label for='product-input'>Product</label>
+  <input type="text" placeholder="..." id='product-input'>
+  <br>
+  <label for='product-info-input'>Tell me about this product</label>
+  <br>
+  <textarea id='product-info-input' rows="5" cols="30" placeholder="Is this your product? Why do you recomend it? etc"></textarea>
+  <br>
+  Would you be willing to send me a free sample?
+  <br>
+  {% for option in page.input-options %}
+    <label for="sample-{{option}}">
+      {{option}}
+    </label>
+    <input type="radio" value="{{option}}" id="sample-{{option}}" name="sample-option">
+  {% endfor %}
+  <br>
+  <button>Submit product</button>
+</div>
 
 <script src="http://www.friendheads.com/js/embed.js"></script>
 <script type="text/javascript">
