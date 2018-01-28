@@ -2,19 +2,27 @@
 layout: default
 ---
 
-{% assign range = "0,100,200,300,400,500,600" | split: "," %}
 
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-<div class="full-puzzle">
-  {% for x in range %}
-      {% for y in range %}
-      <span class='puzzle-piece sortable' style='background-position: -{{y}}px -{{x}}px'>
-      </span>
+{% for p in site.data.puzzles %}
+  <div class="full-puzzle" style='width: {{p.size}}px; height: {{p.size}}px'>
+    {% assign width = p.size | divided_by: p.step %}
+    {% assign s = p.step | minus: 1 %}
+
+    {% for xx in (0..s) %}
+      {% for yy in (0..s) %}
+        {% assign y = yy | times: width %}
+        {% assign x = xx | times: width %}
+        <span
+          class='puzzle-piece sortable'
+          style='background-position: -{{y}}px -{{x}}px; background-image: url("/images/{{p.src}}.png"); width: {{width}}px; height: {{width}}px;'
+        ></span>
       {% endfor %}
-  {% endfor %}
-</div>
+    {% endfor %}
+  </div>
+{% endfor %}
 
 <br>
 
