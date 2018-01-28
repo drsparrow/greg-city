@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+{% assign range = "0,100,200,300,400,500,600" | split: "," %}
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<div class="full-puzzle">
+  {% for x in range %}
+      {% for y in range %}
+      <span class='puzzle-piece sortable' style='background-position: -{{y}}px -{{x}}px'>
+      </span>
+      {% endfor %}
+  {% endfor %}
+</div>
+
+<br>
+
+
+<script type="text/javascript">
+$( function() {
+  $( ".full-puzzle" ).sortable();
+  $( ".full-puzzle" ).disableSelection();
+} );
+</script>

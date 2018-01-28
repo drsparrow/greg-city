@@ -1,0 +1,28 @@
+---
+# front-matter for scss
+---
+
+.puzzle-page {
+
+  .full-puzzle {
+    width: 700px;
+    height: 700px;
+    margin: auto;
+  }
+
+  .puzzle-piece {
+    background-image: url("/images/turtle0.png");
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    float: left;
+
+    &:hover {
+      filter: brightness(150%);
+      box-shadow: 0 0 10px black;
+    }
+  }
+
+}
