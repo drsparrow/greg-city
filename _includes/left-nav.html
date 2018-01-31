@@ -1,12 +1,13 @@
 <section class='left-side-nav'>
-  <div>
+  <div class='main-links'>
+    My site:
     {% for link in site.data.nav %}
       <a href='{{link.path}}' {% if page.path == link.path %} class="selected" {%endif%}>{{link.text}}</a>
     {% endfor %}
   </div>
 
   {% if page.links %}
-    <div>
+    <div class='page-links'>
       This page:
       <br>
       {% for link in page.links %}

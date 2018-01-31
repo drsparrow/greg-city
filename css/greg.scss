@@ -116,8 +116,6 @@ a {
 }
 .left-side-nav {
   position: fixed;
-  border: 2px solid white;
-  background: black;
   left: 10px;
   top: 10px;
   z-index: 4;
@@ -140,7 +138,17 @@ a {
   div {
     padding: 3px;
     background: #eee;
-    margin: 5px;
+    margin: 10px 5px;
+    min-width: 0px;
+
+    &.main-links {
+      border: 4px solid black;
+    }
+
+    &.page-links {
+      border: 2px solid black;
+      font-size: 14px;
+    }
   }
 }
 
