@@ -210,3 +210,14 @@ a {
   width: 100px;
   margin-top: 10px;
 }
+
+.things-container {
+  position: relative;
+
+  .myhead {
+    position: absolute;
+    right: 70px;
+    background: darkgray;
+    box-shadow: -3px 3px 5px black;
+  }
+}
