@@ -7,8 +7,6 @@ links:
     text: Tool Kit
   - id: greg-meets-bagel
     text: Coffe Meets Bagel
-  - id: product-submissions
-    text: Submissions
 toolkit-link: http://www.sears.com/craftsman-evolv-83-pc-homeowner-tool-set-w-bag/p-00941283000P?sid=IDx01192011x202447059&gclid=EAIaIQobChMI9MfpsMT72AIVixuBCh1RwgbBEAQYAiABEgLtz_D_BwE&gclsrc=aw.ds&dclid=CJ7chbPE-9gCFQMNNwodQ7EK7Q
 input-options:
   - "Yes"
@@ -86,7 +84,9 @@ These are things that I can proudly say I promote.  Strong recomendations.
     <input type="radio" value="{{option}}" id="sample-{{option}}" name="sample-option">
   {% endfor %}
   <br>
-  <button>Submit product</button>
+  <button onclick="confirm('Thank you for your submission! Check back soon')">
+    Submit product
+  </button>
 </div>
 
 <script src="http://www.friendheads.com/js/embed.js"></script>
