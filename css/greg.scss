@@ -2,6 +2,8 @@
 # front-matter for scss
 ---
 
+$main-content-padding: 20px;
+
 body {
   font-family: sans-serif;
   margin: 0px;
@@ -18,7 +20,7 @@ body {
   width: 800px;
   margin: 0px auto;
   background: lightgray;
-  padding: 20px;
+  padding: $main-content-padding;
   border-left: 20px solid black;
   border-right: 20px solid black;
   box-shadow: 0 0 500px black;
@@ -63,15 +65,14 @@ table {
 }
 
 .right-link {
-  float: right;
+  right: $main-content-padding;
 }
 
 .left-link {
-  float: left;
+  left: $main-content-padding;
 }
 
 .copyright {
-  position: absolute;
   font-size: 12px;
   color: gray;
   text-align: center;
